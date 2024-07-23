@@ -6,7 +6,7 @@ public class Main {
         jogoDaVelha jogo = new jogoDaVelha();
         int linha = 0;
         int coluna = 0;
-        char letra = ' ';
+        String letra = "";
 
         System.out.println("Jogador 1: X\nJogador 2: O");
         jogo.imprimirMatriz();
@@ -21,10 +21,10 @@ public class Main {
             System.out.println();
 
             if (i % 2 == 0) {
-                letra = 'X';
+                letra = "X";
                 jogo.preencherMatriz(linha, coluna, letra);
             } else {
-                letra = 'O';
+                letra = "O";
                 jogo.preencherMatriz(linha, coluna, letra);
             }
 

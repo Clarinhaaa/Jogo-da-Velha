@@ -1,10 +1,10 @@
 public class jogoDaVelha {
-    private char matriz[][] = {{' ', ' ', ' '},
-                               {' ', ' ', ' '},
-                               {' ', ' ', ' '}};
+    private String matriz[][] = {{"-", "-", "-"},
+                                 {"-", "-", "-"},
+                                 {"-", "-", "-"}};
     private boolean ganhou = false;
 
-    public void preencherMatriz(int i, int j, char letra) {
+    public void preencherMatriz(int i, int j, String letra) {
         matriz[i][j] = letra;
     }
     
@@ -33,8 +33,8 @@ public class jogoDaVelha {
     }
 
     public boolean verificarColuna() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 1; j++) {
+        for (int i = 0; i < 1; i++) {
+            for (int j = 0; j < 3; j++) {
                 if (matriz[j][i] == matriz[j + 1][i] && matriz[j][i] == matriz[j + 2][i]) {
                     ganhou = true;
                 }
@@ -50,7 +50,7 @@ public class jogoDaVelha {
     public boolean verificarDiagonal() {
         if (matriz[0][0] == matriz[1][1] && matriz[0][0] == matriz[2][2]) {
             ganhou = true;
-        } else if (matriz[2][2] == matriz[1][1] && matriz[2][2] == matriz[2][0]) {
+        } else if (matriz[0][2] == matriz[1][1] && matriz[0][2] == matriz[2][0]) {
             ganhou = true;
         }
 
