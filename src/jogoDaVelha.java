@@ -42,10 +42,10 @@ public class jogoDaVelha {
     }
 
     public boolean verificarDiagonal() {
-        if (this.matriz[0][0] == '-' && this.matriz[0][0] == this.matriz[1][1]
+        if (this.matriz[0][0] != '-' && this.matriz[0][0] == this.matriz[1][1]
                 && this.matriz[0][0] == this.matriz[2][2]) {
             this.ganhou = true;
-        } else if (this.matriz[0][2] == '-' && this.matriz[0][2] == this.matriz[1][1]
+        } else if (this.matriz[0][2] != '-' && this.matriz[0][2] == this.matriz[1][1]
                 && this.matriz[0][2] == this.matriz[2][0]) {
             this.ganhou = true;
         }
